@@ -12,7 +12,7 @@ Rate Coding: Encodes information as the average spike rate; commonly used in pat
 Burst Coding: Utilizes multiple spikes in short intervals, suitable for noisy environments such as brain-computer interfaces.
 Phase Coding: Relies on spike timing within an oscillatory cycle, useful in tasks requiring precise synchronization, like motor control.
 Time-To-First-Spike (TTFS) Coding: Encodes based on the time to the first spike after a stimulus, enabling ultra-fast decision-making.
-("C:\Users\preet\Downloads\EEG-Proj\methodolody.jpg")
+!("C:\Users\preet\Downloads\EEG-Proj\methodolody.jpg")
 
 Methodology
 EEG Signal Preprocessing and Storage in BRAM: The EEG signal dataset is preprocessed and stored in a Block RAM (BRAM) IP core in Vivado, configured with a 32-bit width and a depth of 784 bits. The Vivado IP core provides efficient storage and retrieval for large datasets.
