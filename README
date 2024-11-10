@@ -1,0 +1,28 @@
+Neural Encoding Algorithms for Spiking Neural Networks
+
+
+Introduction
+Spiking Neural Networks (SNNs) are inspired by biological neural processes, offering advantages in energy efficiency and parallel processing. SNNs are particularly suitable for applications that require low power and real-time processing.
+
+
+Neural Encoding Schemes
+Effective neural encoding is essential for converting analog signals into spike trains for SNNs. Different encoding schemes impact the efficiency and accuracy of decision-making in SNNs.
+Encoding Schemes Explored
+Rate Coding: Encodes information as the average spike rate; commonly used in pattern recognition tasks like image classification.
+Burst Coding: Utilizes multiple spikes in short intervals, suitable for noisy environments such as brain-computer interfaces.
+Phase Coding: Relies on spike timing within an oscillatory cycle, useful in tasks requiring precise synchronization, like motor control.
+Time-To-First-Spike (TTFS) Coding: Encodes based on the time to the first spike after a stimulus, enabling ultra-fast decision-making.
+![SNN Architecture]("C:\Users\preet\Downloads\EEG-Proj\methodolody.jpg")
+
+Methodology
+EEG Signal Preprocessing and Storage in BRAM: The EEG signal dataset is preprocessed and stored in a Block RAM (BRAM) IP core in Vivado, configured with a 32-bit width and a depth of 784 bits. The Vivado IP core provides efficient storage and retrieval for large datasets.
+Addressing and Data Retrieval from BRAM: A memory read module with a 10-bit address counter accesses 32-bit data sequentially from the BRAM, resetting after 784 cycles.
+
+
+Spiking Neural Network Encoding: The most significant bits (MSBs) of the retrieved data are processed through encoding schemes—rate, burst, phase, and TTFS—to generate spike trains for SNN processing.
+Dataset Creation with Threshold Encoding
+EEG data is preprocessed and encoded with threshold-based methods to generate spike trains. The dataset includes normal and abnormal signals, enabling binary classification tasks.
+
+
+Leaky Integrate-and-Fire (LIF) Neuron Model Training and Prediction
+An SNN model using Leaky Integrate-and-Fire (LIF) neurons is trained on the encoded dataset. The model's performance demonstrates the potential of SNNs combined with optimized encoding schemes for accurate medical diagnosis.
